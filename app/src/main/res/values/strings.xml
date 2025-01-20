@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Polinet</string>
+    <string name="logo">Logo Polinet</string>
+    <string name="btn_correo">Continuar con Correo Electrónico</string>
+    <string name="btn_facebook">Continuar con Facebook</string>
+    <string name="btn_google">Continuar con Google</string>
+    <string name="txt_iniciar_sesion">Iniciar Sesión</string>
+</resources>
