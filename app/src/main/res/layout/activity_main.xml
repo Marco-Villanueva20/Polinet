@@ -46,6 +46,13 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/bprueba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prueba"
+            android:onClick="cambioPantalla"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
