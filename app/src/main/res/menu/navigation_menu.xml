@@ -2,17 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/itemInicio"
-        android:icon="@drawable/ic_home" />
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"
+        />
     <item
         android:id="@+id/itemMiCuenta"
         android:icon="@drawable/ic_micuenta"
+        android:title="Mi Cuenta"
         />
     <item
         android:id="@+id/itemCarrito"
         android:icon="@drawable/ic_carrito"
+        android:title="Carrito"
         />
     <item
         android:id="@+id/itemOpciones"
         android:icon="@drawable/ic_opcionales"
+        android:title="Configuracion"
         />
 </menu>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".InicioFragment">
 
     <TextView
@@ -12,7 +13,6 @@
         android:layout_gravity="center"
         android:text="Edicion de Inicio"
         android:textColor="@color/black"
-        android:textSize="35sp"
-        />
+        android:textSize="35sp" />
 
 </FrameLayout>
