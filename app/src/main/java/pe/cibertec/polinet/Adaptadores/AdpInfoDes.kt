@@ -19,7 +19,7 @@ class AdpInfoDes (private val listaInfoDes: List<EntInfoDes>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InfoDesViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_info_destacada, parent, false)
+        val itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_info_destacada, parent, false)
         return InfoDesViewHolder(itemView)
     }
 
