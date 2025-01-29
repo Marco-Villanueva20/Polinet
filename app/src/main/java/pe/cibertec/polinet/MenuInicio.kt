@@ -1,6 +1,5 @@
 package pe.cibertec.polinet
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +8,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import pe.cibertec.polinet.Fragments.CarritoFragment
+import pe.cibertec.polinet.Fragments.InicioFragment
+import pe.cibertec.polinet.Fragments.MiCuentaFragment
+import pe.cibertec.polinet.Fragments.OpcionalesFragment
 
 class MenuInicio : AppCompatActivity() {
 
@@ -72,5 +75,7 @@ class MenuInicio : AppCompatActivity() {
             addToBackStack("replacement")
         }
     }
+
+
 
 }
