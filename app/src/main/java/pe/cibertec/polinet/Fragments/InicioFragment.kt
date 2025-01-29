@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pe.cibertec.polinet.Adaptadores.AdpInfoDes
 import pe.cibertec.polinet.Adaptadores.AdpMasVen
+import pe.cibertec.polinet.Adaptadores.AdpNuPro
 import pe.cibertec.polinet.Adaptadores.AdpPuIn
 import pe.cibertec.polinet.Entidades.EntInfoDes
 import pe.cibertec.polinet.Entidades.EntMasVen
+import pe.cibertec.polinet.Entidades.EntNuPro
 import pe.cibertec.polinet.Entidades.EntPuIn
 import pe.cibertec.polinet.R
 
@@ -26,6 +28,9 @@ class InicioFragment : Fragment() {
     private lateinit var recyclerPuIn: RecyclerView
     private lateinit var adapterPuIn: AdpPuIn
 
+    private lateinit var recyclerNuevosProductos: RecyclerView
+    private lateinit var adapterNuevosProductos: AdpNuPro
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,10 +40,12 @@ class InicioFragment : Fragment() {
         recyclerInfoDes = view.findViewById(R.id.rcvInfoDest)
         recyclerLoMasVendido = view.findViewById(R.id.rcvLoMasVendido)
         recyclerPuIn = view.findViewById(R.id.rcvPuIn)
+        recyclerNuevosProductos = view.findViewById(R.id.rcvNuevosProductos)
 
         cargarinfodestacada()
         cargarLoMasVendido()
         cargarPublicidades()
+        cargarNuevosProductos()
 
         return view
     }
@@ -84,6 +91,22 @@ class InicioFragment : Fragment() {
         recyclerPuIn.adapter = adapterPuIn
 
         recyclerPuIn.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    private fun cargarNuevosProductos() {
+        val listaNuevosProductos = listOf(
+            EntNuPro(R.drawable.bnp1, "TARJ. VIDEO MSI GEFORGE GT 730 2GB DDR3 V3", "Código: 014462", 3),
+            EntNuPro(R.drawable.bnp2, "MONITOR BRNG LED 27 ( PD2700QT ) ARTES GRAFICAS", "Código: 014455", 23),
+            EntNuPro(R.drawable.bnp3, "MONITOR BENQ LED BACKLIGTH 32 ( PD3200U )", "Código: 014456", 12),
+            EntNuPro(R.drawable.bnp4, "PROYECTOR BENQ MX631ST DLP ( MX631ST ) | VGA | 2 HDMI", "Código: 014454", 10),
+            EntNuPro(R.drawable.bnp5, "MONITOR BENQ LED 27 ( GW2785TC ) | EYE - CARE |", "Código: 014457", 24),
+            EntNuPro(R.drawable.bnp6, "IMPRESORA CANON PIXMA MP247", "Código: 014457", 25)
+        )
+
+        adapterNuevosProductos = AdpNuPro(listaNuevosProductos)
+
+        recyclerNuevosProductos.adapter = adapterNuevosProductos
+        recyclerNuevosProductos.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     }
 }
 
