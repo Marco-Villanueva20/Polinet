@@ -5,13 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pe.cibertec.polinet.Adaptadores.AdpInfoDes
 import pe.cibertec.polinet.Adaptadores.AdpMasVen
+import pe.cibertec.polinet.Adaptadores.AdpPuIn
 import pe.cibertec.polinet.Entidades.EntInfoDes
 import pe.cibertec.polinet.Entidades.EntMasVen
+import pe.cibertec.polinet.Entidades.EntPuIn
 import pe.cibertec.polinet.R
 
 class InicioFragment : Fragment() {
@@ -22,6 +23,9 @@ class InicioFragment : Fragment() {
     private lateinit var recyclerLoMasVendido: RecyclerView
     private lateinit var adaptadorLoMasVendido: AdpMasVen
 
+    private lateinit var recyclerPuIn: RecyclerView
+    private lateinit var adapterPuIn: AdpPuIn
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,9 +34,11 @@ class InicioFragment : Fragment() {
 
         recyclerInfoDes = view.findViewById(R.id.rcvInfoDest)
         recyclerLoMasVendido = view.findViewById(R.id.rcvLoMasVendido)
+        recyclerPuIn = view.findViewById(R.id.rcvPuIn)
 
         cargarinfodestacada()
         cargarLoMasVendido()
+        cargarPublicidades()
 
         return view
     }
@@ -67,5 +73,18 @@ class InicioFragment : Fragment() {
         recyclerLoMasVendido.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     }
 
+    private fun cargarPublicidades() {
+        val listaPublicidades = mutableListOf(
+            EntPuIn(R.drawable.ppi1),
+            EntPuIn(R.drawable.ppi2),
+            EntPuIn(R.drawable.ppi3)
+        )
+
+        adapterPuIn = AdpPuIn(listaPublicidades)
+        recyclerPuIn.adapter = adapterPuIn
+
+        recyclerPuIn.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
 }
+
 
