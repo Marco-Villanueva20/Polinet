@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="2dp"
                 android:text="Informacion Destacada:"
                 android:textColor="#BA68C8"
                 android:textSize="20sp"
@@ -83,7 +83,9 @@
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_margin="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/rcvInfoDest"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -109,7 +111,9 @@
                     android:id="@+id/rcvLoMasVendido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"/>
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"/>
             </LinearLayout>
 
         </LinearLayout>
